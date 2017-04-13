@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html class="longPage">
+
+  <head>
+    <link href="/style.css" rel="stylesheet" type="text/css">
+    <meta charset="utf-8">
+    <title>Planet List</title>
+  </head>
+
+  <body>
+    <h1>PLANET: {{title}}</h1>
+    <hr><br>
+    <div>
+      <a class="redirect" href="/" >Home</a>
+      <a class="redirect" href="/planets" >Back</a>
+    </div><br>
+    {{#planets}}
+    <div id="creatureblock">
+      <h2><a href="/creatures/{{id}}">Species: {{species}}</a></h2>
+      <ul>
+        <li>Family:  <span style="margin-left:99px">{{family}}</span> </li> 
+        <li>Habitat:  <span style="margin-left:96px">{{habitat}}</span></li> 
+        <li>Main Diet:  <span style="margin-left:67px">{{diet}}</span></li>
+        <li>Planet of Origin:  <span style="margin-left:8px">{{planet}}</span></li>
+      </ul>
+    </div>
+    <br>
+    {{/planets}}
+  </body>
+
+</html>

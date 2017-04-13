@@ -1,0 +1,296 @@
+@font-face {
+  font-family: 'mplantin';
+  src: url('fonts/mplantin.tff') format('tff');
+  src: url('fonts/mplantin.woff') format('woff');
+}
+
+@font-face  {
+  font-family: 'matrix-bold';
+  src: url('fonts/Matrix-Bold.tff') format('tff');
+  src: url('fonts/Matrix-Bold.woff') format('woff');
+}
+
+html {
+  background-repeat: no-repeat;
+  background: linear-gradient(gray, darkgreen);
+  background: -webkit-linear-gradient(gray, darkgreen);
+  background: -moz-linear-gradient(gray, darkgreen);
+  height: 100%;
+  position: relative;
+}
+.longPage{
+  background-repeat: no-repeat;
+  background: linear-gradient(gray, darkgreen) fixed;
+  background: -webkit-linear-gradient(gray, darkgreen) fixed;
+  background: -moz-linear-gradient(gray, darkgreen) fixed;
+  height: auto;
+}
+h1 {
+  color: darkred;
+  text-align: center;
+  background-color: rgb(230,230,230);
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 5px 5px 5px rgba(0,0,0,.6);
+  padding: 20px;
+  font-family: 'matrix-bold';
+  font-size: 40px;
+}
+.redirect {
+  display: inline-block;
+  width: 160px;
+  clear: both;
+  background-color: lightgray;
+  padding: 5px 0;
+  text-decoration: none;
+  text-align: center;
+  color: black;
+  border: 1px solid darkgray;
+  border-radius: 5px;
+  margin: 0.5% 6.5%;
+}
+.redirect:hover{
+  background-color: gray;
+  color: white;
+  border-color: white;
+  border-radius: 5px;
+}
+
+#clear {
+  clear: both;
+  text-align: center;
+  background-color: lightgray;
+  padding: 5px;
+  font-size: 20px;
+  margin: 20px auto;
+  line-height: 35px;
+  width: 80%;
+  font-family: sans-serif;
+}
+#clear input {
+  font-size: 20px;
+  width: 300px;
+  border: none;
+}
+#clear textarea {
+  font-size: 20px;
+  width: 300px;
+  height: 80px;
+}
+#clear select {
+  height: 30px;
+  font-size: 15px;
+}
+
+#floatleft {
+  float: left;
+  margin: 15px 1%;
+  padding: 5px;
+  text-align: center;
+  background-color: darkgray;
+  width: 350px;
+  box-shadow: 4px 4px 4px black;
+}
+
+#newForm {
+  font-size: 30px;
+  background-color: lightgray;
+  width: 50%;
+  text-align: center;
+  margin: 5%;
+  padding: 10px;
+  line-height: 50px;
+}
+#newForm input {
+  width: 200px;
+  height: 30px;
+  font-size: 20px;
+  margin-left: 15px;
+}
+.cards {
+  position: relative;
+  display: inline-block;
+  margin: 5px;
+  float: left;
+  width: 312px;
+  height: 445px;
+}
+.rarity img {
+  position: absolute;
+  top: 255px;
+  right: 19px;
+}
+.flavortext {
+  width: 20px;
+}
+.flavortext p {
+  position: absolute;
+  top: 280px;
+  left: 27px;
+  width: 260px;
+  overflow: auto;
+  height: 110px;
+  text-align: justify;
+  font-family: 'mplantin';
+  text-decoration: none;
+  color: black;
+}
+.titletext p {
+  position: absolute;
+  top: 2px;
+  left: 21px;
+  font-family: 'matrix-bold';
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+}
+.powers p {
+  position: absolute;
+  bottom: -3px;
+  right: 33px;
+  font-family: 'mplantin';
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+  font-weight: 600;
+}
+.bckgimg{
+  clear: both;
+  position: absolute;
+  top: 45px;
+  left: 19px;
+  z-index: 5;
+  width: 275px;
+  height: 202px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  object-fit: contain;
+  background-position: center;
+}
+
+.editCard{
+  clear: both;
+  width: 60%;
+  background: white;
+  display: inline-block;
+  text-align: center;
+  margin-left: 20%;
+  padding-bottom: 30px;
+  font-size: 20px;
+  font-family: sans-serif;
+}
+.editCard textarea {
+  width: 300px;
+  height: 50px;
+  font-size: 16px;
+}
+.editCard input {
+  font-size: 18px;
+}
+.editCard label {
+  line-height: 30px;
+}
+.cardbuilder {
+  width: 75%;
+  float: left;
+}
+#sampletext {
+  position: fixed;
+  width: 18%;
+  right: 1%;
+  top: 8%;
+  float: right;
+  display: block;
+  text-align: center;
+  background-color: rgb(230,230,230);
+  padding: 10px;
+  font-family: 'mplantin';
+  box-shadow: 3px 3px 3px rgba(0,0,0,.8);
+  border: 1px gray outset;
+  font-size: 13px;
+}
+#logout {
+  clear: both;
+}
+.apicards {
+  width: 312px;
+  height: auto;
+  margin-left: 10%;
+  margin-bottom: 10%;
+  margin-top: -2%;
+  border-radius: 13px;
+  box-shadow: 10px 10px 15px rgba(0,0,0,.5);
+}
+#cardgrid {
+  margin: 0 20%;
+}
+#showcard {
+  display: inline-block;
+  margin: 0 40%;
+}
+.login {
+  position: absolute;
+  background: rgb(230,230,230);
+  display: inline-block;
+  top: 30%;
+  left: 33%;
+  width: 30%;
+  padding: 10px 30px;
+  border: 1px lightgray outset;
+  box-shadow: 4px 4px 4px rgba(0,0,0,.8);
+  font-family: sans-serif;
+  font-size: 18px;
+  text-align: center;
+}
+.login input {
+  border: none;
+  height: 25px;
+  font-size: 18px;
+  width: 100px;
+  margin-left: 5px;
+}
+.login button {
+  border: none;
+  font-size: 16px;
+  margin: 10px 0px 0px 22px;
+  border: 1px solid darkgray;
+}
+#mainpage {
+  background-image: url(magicbckg.jpg);
+  background-size: cover;
+}
+.buttons1 {
+  margin: 0 auto;
+  font-family: 'matrix-bold';
+  font-size: 20px;
+  width: 50%;
+}
+.examples {
+  text-align: center;
+  font-family: 'mplantin';
+  font-size: 30px;
+  text-shadow: 2px 2px 2px rgba(0,0,0,.5);
+}
+#newcardbutton {
+  background-color: white;
+}
+#newcardbutton:hover {
+  background-color: gray;
+}
+#deletebutton {
+  color: red;
+  width: 300px;
+}
+#deletebutton:hover {
+  color: white;
+  background-color: red;
+}
+#signup {
+  background-image: url(571767.jpg);
+  background-size: contain;
+}
+#etc {
+  padding: 0;
+  margin-bottom: -6px;
+}

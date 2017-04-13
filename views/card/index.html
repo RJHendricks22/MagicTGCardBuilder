@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html class="longPage">
+
+  <head>
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="/fonts/mplantin.ttf" rel="stylesheet">
+    <link href="/style.css" rel="stylesheet" type="text/css">
+    <meta charset="utf-8">
+    <title>Build the Card</title>
+  </head>
+
+  <body>
+    {{#logged_in}}
+    <h1>{{title}}</h1>
+    <hr><br>
+    <div class="buttons1">
+      <a class="redirect" href="/" >Home</a>
+      <a href="/logout" class="redirect">Logout!</a>
+    </div>
+    <div class="cardbuilder">
+      <form action="/card" method="post" enctype="multipart/form-data">
+        <br>
+        {{#colors}}
+        <div id="floatleft">
+          <img src="{{image}}">
+          <label for="id_color"><h3>Click to use this card</h3><input type="radio" value="{{id}}" name="id_color"></label>
+        </div>
+        {{/colors}}
+        <br>
+        <div id="clear">
+          <input type="file" name="backgroundImg" id="fileup" accept="image/*">
+          <div>
+            <label for="rarity">Select the Rarity:   
+              <select name="rarity" placeholder="Select Rarity" >
+                <option value="1">Common</option>
+                <option value="2">Uncommon</option>
+                <option value="3">Rare</option>
+                <option value="4">Mythic Rare</option>
+              </select>
+            </label>
+          </div>
+          <div>
+            <label for="titleText">Title the Card:    <input name="titleText" type="text" placeholder="Title Text"> </label><br>
+            <label for="Ftext">Add Text to the Card:    <textarea name="Ftext" type="text" placeholder="Flavor Text"></textarea></label><br>
+            <label for="attack">Choose attack value:    <input name="attack" type="number" min="0" max="14" placeholder="Num" style="width:80px;"> </label><br>
+            <label for="defend">Choose defense value:    <input name="defend" type="number" min="0" max="14" placeholder="Num" style="width:80px;"> </label><br>
+          </div>
+          <input type="submit" value="New Card" class="redirect" id="newcardbutton">
+        </div>
+
+      </form>
+    </div>
+    <div id="sampletext">
+      <h2>Sample Card Text:</h2>
+      <h2 id="text1"></h2><br>
+      <h2 id="text2"></h2><br>
+      <h2 id="text3"></h2><br>
+      <h2 id="text4"></h2><br>
+      <h2 id="text5"></h2><br>
+    </div>
+
+    {{/logged_in}}
+    {{^logged_in}}
+    <div class="noLogged">
+      <h1>You are not logged in! </h1>
+      <div class="login" style="margin-top:10%;">
+        <h3>Please <a href="/">Click Here</a> to Login</h3>
+      </div>
+    </div>
+    {{/logged_in}}
+    <script type="text/javascript" src="/js/jquery.js"></script>
+    <script type="text/javascript" src="/js/materialize.js"></script>
+    <script type="text/javascript" src="/js/script.js"></script>
+  </body>
+
+</html>

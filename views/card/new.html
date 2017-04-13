@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <link href="/style.css" rel="stylesheet" type="text/css">
+    <meta charset="utf-8">
+    <title>New Creature</title>
+  </head>
+
+  <body>
+
+    <h1>New Creature Entry Form</h1>
+    <hr><br>
+    <a class="redirect" href="/" >Home</a>
+    <form id="newForm" action="/creatures" method="post">
+      <label for="species">Species Name:<input name="species" type="text" placeholder="Species Name"> </label><br>
+      <label for="family">Family: <input name="family" type="text" placeholder="Family"></label><br>
+      <label for="habitat">Habitat: <input name="habitat" type="text" placeholder="Habitat"></label><br>
+      <label for="diet">Diet: <input name="diet" type="text" placeholder="Diet"></label><br>
+      <label for="planet">Origin Planet: <input name="planet" type="text" placeholder="Planet"></label><br>
+      <input type="submit" value="Add new creature">
+    </form>
+    
+  </body>
+
+</html>

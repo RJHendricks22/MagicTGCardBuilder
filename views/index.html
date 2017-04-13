@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html id="mainpage">
+
+  <head>
+    <link href="animate.css" type="text/css" rel="stylesheet">
+    <link href="/style.css" type="text/css" rel="stylesheet">
+    <meta charset="utf-8">
+    <title>Magic Card Generator</title>
+  </head>
+
+  <body>
+    <h1>Create your own custom Magic Card!</h1>
+    <hr/>
+    {{#logged_in}}
+    <div class="buttons1">
+      <a href="card/" class="redirect">Build A Card HERE</a>
+      <a href="final/" class="redirect">Your Built Cards</a>
+      <a href="/logout" class="redirect">Logout!</a>
+    </div>
+    <br>
+    <h2 class="examples">Check out these cards as examples</h2>
+    <br>
+    <div>
+      <ul>
+        <a id="card1link" href="" target="_blank"><img class="apicards animated fadeInUp" id="card1"></a>
+        <a id="card2link" href="" target="_blank"><img class="apicards animated fadeInUp" id="card2"></a>
+        <a id="card3link" href="" target="_blank"><img class="apicards animated fadeInUp" id="card3"></a>
+      </ul>
+    </div>
+    <div>
+      <br>
+      <p>Created by Ray Hendricks</p>
+    </div>
+    {{/logged_in}}
+    {{^logged_in}}
+    <div class="login">
+      <p>{{error}}</p>
+      <p>{{user}}</p>
+      <h3>Please sign in or create an account!</h3>
+      <form action="/login" method="post">
+        <label for="username">Username: </label>
+        <input name="username" type="text" id="username" placeholder="Username">
+        <label for="password" >Password: </label>
+        <input name="password" type="password"  id="password" placeholder="Password">
+        <button type="submit" class="redirect" >Login</button>
+      </form>
+      <p>Not a member? <a href="/signup">Sign Up!</a></p>
+    </div>
+    {{/logged_in}}
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/materialize.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+  </body>
+</html>

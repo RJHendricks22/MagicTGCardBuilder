@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="/fonts/mplantin.ttf" rel="stylesheet" type="text/css">    
+    <link href="/style.css" rel="stylesheet" type="text/css">
+    <meta charset="utf-8">
+    <title>Final</title>
+  </head>
+
+  <body>
+    {{#logged_in}}
+    <h1>Edit this Card</h1>
+    <div class="buttons1">
+      <a class="redirect" href="/" >Home</a>
+      <a class="redirect" href="/final">Back</a>
+      <a class="redirect" href="/logout">Logout!</a>
+    </div>
+    <br>
+    {{#colors}}
+    <div id="showcard">
+      <div class="cards" >
+<!--        style="background-image:url({{image}})"-->
+        <img src="{{image}}" >
+        <div class="rarity">
+          <img src="{{rare_image}}">
+        </div>
+        <div class="flavortext">
+          <p>{{flavortext}}</p>
+        </div>
+        <div class="titletext">
+          <p>{{titletext}}</p>
+        </div>
+        <div class="powers">
+          <p>{{id_attack}}/{{id_defend}}</p>
+        </div>
+        <img class="bckgimg" src='/uploads/{{backgroundimg}}'>
+        </div>
+<!--
+        <div class="bckgimg" style="background-image:url(/uploads/{{backgroundimg}})">
+        </div>
+-->
+      </div>
+    </div>
+    <div class="editCard">
+      <form action="/final/{{built_id}}?_method=PUT" method="post">
+        <h3 id="etc">Edit this Card</h3>
+        <br />
+        <label for="flavortext">Update Card Text: <textarea name="flavortext" rows="1" cols="1" type="text">{{flavortext}}</textarea></label><br>
+        <label for="titletext">Update Card Title: <input name="titletext" type="text" value="{{titletext}}"></label><br>
+        <label for="id_attack">Update Attack / Defense: <input name="id_attack" type="number" value="{{id_attack}}" style="width:80px;"> / <input name="id_defend" type="number" value="{{id_defend}}" style="width:80px;"></label><br>
+        <input type="submit" class="redirect">
+        <br>
+      </form>
+      <div>
+        <a href="/final/delete/{{built_id}}" class="redirect" id="deletebutton">DELETE THIS CARD</a>
+      </div>
+    </div>
+    {{/colors}}
+    <br>
+    <input id="btn-Preview-Image" type="button" value="Preview" />
+    <a id="btn-Convert-Html2Image" href="#">Download</a>
+    <br>
+    <h3>Preview :</h3>
+    <div id="previewImage">
+    </div>
+    {{/logged_in}}
+    {{^logged_in}}
+    <div class="noLogged">
+      <h1>You are not logged in! </h1>
+      <h3>Please <a href="/">Click Here</a> to Login</h3>
+    </div>
+    {{/logged_in}}
+    <script type="text/javascript" src="/js/jquery.js"></script>
+    <script type="text/javascript" src="/js/materialize.js"></script>
+    <script type="text/javascript" src="/js/html2canvas.js"></script>
+    <script type="text/javascript" src="/js/script.js"></script>
+  </body>
+</html>

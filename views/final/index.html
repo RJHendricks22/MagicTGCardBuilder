@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html class="longPage">
+
+  <head>
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="/fonts/mplantin.ttf" rel="stylesheet">
+    <link href="/style.css" rel="stylesheet" type="text/css">
+    <meta charset="utf-8">
+    <title>Final</title>
+  </head>
+
+  <body>
+    {{#logged_in}}
+    <h1>{{title}}</h1>
+    <hr><br>
+    <div class="buttons1">
+      <a class="redirect" href="/" >Home</a>
+      <a class="redirect" href="/logout">Logout!</a>
+    </div>
+    <br>
+    <h2 class="examples">Click on a card to edit or delete it!</h2>
+    <div id="cardgrid">
+      {{#colors}}
+      <a href="/final/{{built_id}}">
+        <div class="cards" style="background-image:url({{image}})">
+          <div class="rarity">
+            <img src="{{rare_image}}">
+          </div>
+          <div class="flavortext">
+            <p>{{flavortext}}</p>
+          </div>
+          <div class="titletext">
+            <p>{{titletext}}</p>
+          </div>
+          <div class="powers">
+            <p>{{id_attack}}/{{id_defend}}</p>
+          </div>
+          <div class="bckgimg" style="background-image:url(/uploads/{{backgroundimg}})">
+          </div>
+        </div>
+      </a>
+      {{/colors}}
+    </div>
+
+    {{/logged_in}}
+    {{^logged_in}}
+    <div class="noLogged">
+      <h1>You are not logged in! </h1>
+      <div class="login" style="margin-top:10%;">
+        <h3>Please <a href="/">Click Here</a> to Login</h3>
+      </div>
+    </div>
+    {{/logged_in}}
+    <script type="text/javascript" src="/js/jquery.js"></script>
+    <script type="text/javascript" src="/js/materialize.js"></script>
+    <script type="text/javascript" src="/js/script.js"></script>
+  </body>
+
+</html>
